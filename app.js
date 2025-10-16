@@ -56,5 +56,8 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message });
   });
 DBConcction(() => {
-    app.listen(port)
-})
+  console.log("Database connected successfully");
+});
+
+module.exports = app;
+
